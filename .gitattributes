@@ -31,30 +31,27 @@ int main() {
 
 
 
-#include <conio.h> //задание 2
+#define _CRT_SECURE_NO_WARNINGS//задание 2
 #include <stdio.h>
+#include <conio.h>
 #include <stdlib.h>
-void main() {	
-const int maxNumber = 100;
-int* p=0;
-unsigned i, size;
-do {
-printf("Enter number from 0 to %d: ", maxNumber);
-scanf("%d", &size);
-if (size < maxNumber) {
-break;
-}
-} while (1);
-p = (int*)malloc(size * sizeof(int)); // Функция malloc выделяет блок памяти, размером sizemem байт
-for (i = 0; i < size; i++) {
-p[i] = i * i;
-}
-for (i = 0; i < size; i++) {
-printf("%d ", p[i]);
-}
-_getch();
-free(p);
-}
+#include <clocale>
+
+int main() {
+
+	char* locale = setlocale(LC_ALL, "");
+	int i, n;
+	scanf("%d", &n);
+	int* a;
+	a = (int*)malloc(n * sizeof(int));
+	for (i = 0; i < 10; i++)
+	{
+		a[i] = rand()%10;
+		printf(" %d", a[i]);
+	}
+
+	}
+
 
 
 
